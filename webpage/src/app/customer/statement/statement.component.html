@@ -1,0 +1,64 @@
+<section class="h-100 h-custom" style="background-color: #FFC83D;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="assets/img/statement.svg"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Bank Statement</h3>
+            <p>Kindly select the dates based on your preferences to view your bank statement</p>
+            <form (ngSubmit)="getStatement()">
+              <div class="form-outline mb-4">
+                <label class="form-label" for="fromDate">From</label>
+                <input type="date" id="fromDate" [(ngModel)]="fromDate" name="fromDate" required class="form-control">
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="toDate">To Date</label>
+                <input type="date" id="toDate" [(ngModel)]="toDate" name="toDate" required class="form-control">
+              </div>
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Bank Statement</h6>
+    </div>
+
+  <div class="card-body">
+      <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                  <tr>
+                    <th>Transaction Date</th>
+                    <th>Naration</th>
+                    <th>Value Date</th>
+                    <th>Withdrawal</th>
+                    <th>Deposit</th>
+                    <th>Closing Balance</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let stmt of statement">
+                  <td>{{ stmt.date }}</td>
+                  <td>{{ stmt.naration }}</td>
+                  <td>{{ stmt.valueDate }}</td>
+                  <td>{{ stmt.withdrawal }}</td>
+                  <td>{{ stmt.deposit }}</td>
+                  <td>{{ stmt.closingBalance }}</td>
+                 </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

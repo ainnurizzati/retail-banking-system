@@ -1,0 +1,42 @@
+<section class="h-100 h-custom" style="background-color: #FFC83D;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img src="assets/img/createacc.svg"
+            class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+            alt="Sample photo">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Account Registration Form</h3>
+            <p>Please fill in this form for customer's account registration with SANBank</p>
+
+            <form #createAccountForm="ngForm" (ngSubmit)="createAccount()" class="px-md-2">
+              <div class="form-outline mb-4">
+                <label class="form-label" for="form3Example1q">Customer ID</label>
+                <input type="text" class="form-control" id="customerId" required [(ngModel)]="account.customerId" name="customerId">
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="type">Type</label>
+                <select class="form-control" id="type" required [(ngModel)]="account.type" name="type">
+                  <option value="">Select Account Type</option>
+                  <option value="SAVINGS">SAVINGS</option>
+                  <option value="CURRENT">CURRENT</option>
+                </select>
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="totalBalance">Total Balance</label>
+                <input type="number" class="form-control" id="totalBalance" required [(ngModel)]="account.totalBalance" name="totalBalance">
+              </div>
+
+              <button type="submit" class="btn btn-outline-success">Submit</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  

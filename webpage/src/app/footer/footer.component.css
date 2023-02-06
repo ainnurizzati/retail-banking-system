@@ -1,0 +1,9 @@
+.logo-title {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
+
+footer{
+  background-color: var(--pastel-green);
+  padding: 20px;
+}

@@ -1,0 +1,17 @@
+
+<div class="container rounded our-work">
+  <h2 class="our-work-title">Account</h2>
+  <p>Hi SANBanker! Here are your bank accounts overview</p>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" id="our-work">
+      <div *ngFor="let account of accounts" class="col">
+          <div class="card">
+              <img class="card-img-top" src="assets/img/account.svg" alt="Card image cap">
+              <div class="card-body">
+                  <p class="card-text">Account ID: {{ account.accountId }}</p>
+                  <p class="card-text">Balance (MYR): {{ account.balance }}</p>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+
