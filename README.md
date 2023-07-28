@@ -1,10 +1,4 @@
-Java FSD AWS Angular Training Batch 10 - Retail Banking System 
-
-Team Members:
-Ain Nurizzati Mustafa (236051)
-Muhammad Syazwan Rosli (236055)
-Nurin Annisha Abdul Razak (236049)
-
+Java FSD AWS Angular Training  Retail Banking System 
 
 Modules: 
 1) Customer
